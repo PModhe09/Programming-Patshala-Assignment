@@ -1,113 +1,272 @@
 import Image from "next/image";
+import  {SwiperHero} from "@/components/Swiper";
+import Client from "@/components/Client";
+import Community from "@/components/Community";
+import Content from "@/components/Content";
+import Achievement from "@/components/Achievement";
+import Customers from "@/components/Customers";
+import CommunityUpdates from "@/components/CommunityUpdates";
+
+
+const heroData = {
+	"success": "true",
+	"data": [
+		{
+			"image": "Illustration.png",
+			"title": "Lessons and insights <span>from 8 years</span>",
+			"description": "Where to grow your business as a photographer: site or social media?",
+			"link": { url: '/', name: 'Register' },
+		},
+		{
+			"image": "Illustration.png",
+			"title": "Lessons and insights <span>from 8 years</span>",
+			"description": "Where to grow your business as a photographer: site or social media?",
+			"link": { url: '/', name: 'Register' },
+		},
+		{
+			"image": "Illustration.png",
+			"title": "Lessons and insights <span>from 8 years</span>",
+			"description": "Where to grow your business as a photographer: site or social media?",
+			"link": { url: '/', name: 'Register' },
+		},
+	]
+}
+
+const clientsData = {
+	"success": "true",
+	"data": {
+		"title": "Our Clients",
+		"shortdescription": "We have been working with some Fortune 500+ clients",
+		"clients": [
+			{
+				"image": 'icon0.svg',
+				"dimensions": { width: 40, height: 40 },
+				"link": { url: '/', name: 'Logo 01' }
+			},
+			{
+				"image": 'icon1.svg',
+				"dimensions": { width: 40, height: 28 },
+				"link": { url: '/', name: 'Logo 02' }
+			},
+			{
+				"image": 'icon2.svg',
+				"dimensions": { width: 55, height: 30 },
+				"link": { url: '/', name: 'Logo 03' }
+			},
+			{
+				"image": 'icon3.svg',
+				"dimensions": { width: 47, height: 29 },
+				"link": { url: '/', name: 'Logo 04' }
+			},
+			{
+				"image": 'icon4.svg',
+				"dimensions": { width: 41, height: 27 },
+				"link": { url: '/', name: 'Logo 05' }
+			},
+			{
+				"image": 'icon5.svg',
+				"dimensions": { width: 52, height: 20 },
+				"link": { url: '/', name: 'Logo 06' }
+			},
+			{
+				"image": 'icon6.svg',
+				"dimensions": { width: 55, height: 30 },
+				"link": { url: '/', name: 'Logo 07' }
+			},
+		]
+	}
+}
+
+const communityData = {
+	"success": "true",
+	"data": {
+		'title': 'Manage your entire community in a single system',
+		'shortdescription': 'Who is Nextcent suitable for?',
+		'carddata': [
+			{
+				"icon": "members.svg",
+				"title": "Membership Organisations",
+				"description": "Our membership management software provides full automation of membership renewals and payments",
+				"link": { url: '/', name: 'Learn More' },
+			},
+			{
+				"icon": "buildings.svg",
+				"title": "National Associations",
+				"description": "Our membership management software provides full automation of membership renewals and payments",
+				"link": { url: '/', name: 'Learn More' },
+			},
+			{
+				"icon": "hands.svg",
+				"title": "Clubs And Groups",
+				"description": "Our membership management software provides full automation of membership renewals and payments",
+				"link": { url: '/', name: 'Learn More' },
+			},
+		]
+	}
+};
+
+const contentBlockData1 = {
+	"success": "true",
+	"data": [
+		{
+			"image": "mobile-login.png",
+			"dimensions": { width: 442, height: 433 },
+			"title": "The unseen of spending three years at Pixelgrade",
+			"description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sit amet justo ipsum. Sed accumsan quam vitae est varius fringilla. Pellentesque placerat vestibulum lorem sed porta. Nullam mattis tristique iaculis. Nullam pulvinar sit amet risus pretium auctor. Etiam quis massa pulvinar, aliquam quam vitae, tempus sem. Donec elementum pulvinar odio.",
+			"link": { url: '/', name: 'Learn More' },
+			"imageonright": false,
+		},
+	]
+}
+
+const achievemenetData = {
+	"success": "true",
+	"data": [
+		{
+			"title": "Helping a local<br /><span>business reinvent itself</span>",
+			"shortdescription": "We reached here with our hard work and dedication",
+			"achievements": [
+				{
+					"count": 2245341,
+					"text": "Members",
+					"icon": "members.png",
+				},
+				{
+					"count": 46328,
+					"text": "Clubs",
+					"icon": "hands.png",
+				},
+				{
+					"count": 828867,
+					"text": "Event Bookings",
+					"icon": "bookings.png",
+				},
+				{
+					"count": 1926436,
+					"text": "Payments",
+					"icon": "payments.png",
+				},
+			],
+		},
+	]
+}
+
+const contentBlockData2 = {
+	"success": "true",
+	"data": [
+		{
+			"image": "logging-in.png",
+			"dimensions": { width: 442, height: 433 },
+			"title": "How to design your site footer like we did",
+			"description": "Donec a eros justo. Fusce egestas tristique ultrices. Nam tempor, augue nec tincidunt molestie, massa nunc varius arcu, at scelerisque elit erat a magna. Donec quis erat at libero ultrices mollis. In hac habitasse platea dictumst. Vivamus vehicula leo dui, at porta nisi facilisis finibus. In euismod augue vitae nisi ultricies, non aliquet urna tincidunt. Integer in nisi eget nulla commodo faucibus efficitur quis massa. Praesent felis est, finibus et nisi ac, hendrerit venenatis libero. Donec consectetur faucibus ipsum id gravida.",
+			"link": { url: '/', name: 'Learn More' },
+			"imageonright": false,
+		},
+	]
+}
+
+const contentBlockData3 = {
+	"success": "true",
+	"data": [
+		{
+			"image": "",
+			"dimensions": { width: 0, height: 0 },
+			"title": "Pellentesque suscipit fringilla libero eu.",
+			"description": "",
+			"link": { url: '/', name: 'Get a Demo', arrow: true },
+			"imageonright": false,
+		},
+	]
+}
+
+const customersData = {
+	"success": "true",
+	"data": {
+		"image": "tesla.png",
+		"dimensions": { width: 326, height: 326 },
+		"text": "Maecenas dignissim justo eget nulla rutrum molestie. Maecenas lobortis sem dui, vel rutrum risus tincidunt ullamcorper. Proin eu enim metus. Vivamus sed libero ornare, tristique quam in, gravida enim. Nullam ut molestie arcu, at hendrerit elit. Morbi laoreet elit at ligula molestie, nec molestie mi blandit. Suspendisse cursus tellus sed augue ultrices, quis tristique nulla sodales. Suspendisse eget lorem eu turpis vestibulum pretium. Suspendisse potenti. Quisque malesuada enim sapien, vitae placerat ante feugiat eget. Quisque vulputate odio neque, eget efficitur libero condimentum id. Curabitur id nibh id sem dignissim finibus ac sit amet magna.",
+		"textby": {
+			"name": "Tim Smith",
+			"post": "British Dragon Boat Racing Association"
+		},
+		"associated": [
+			{
+				"image": 'icon0_colored.svg',
+				"dimensions": { width: 40, height: 40 },
+				"link": { url: '/', name: 'Logo 01' }
+			},
+			{
+				"image": 'icon1.svg',
+				"dimensions": { width: 40, height: 28 },
+				"link": { url: '/', name: 'Logo 02' }
+			},
+			{
+				"image": 'icon2.svg',
+				"dimensions": { width: 55, height: 30 },
+				"link": { url: '/', name: 'Logo 03' }
+			},
+			{
+				"image": 'icon3.svg',
+				"dimensions": { width: 47, height: 29 },
+				"link": { url: '/', name: 'Logo 04' }
+			},
+			{
+				"image": 'icon4.svg',
+				"dimensions": { width: 41, height: 27 },
+				"link": { url: '/', name: 'Logo 05' }
+			},
+			{
+				"image": 'icon5.svg',
+				"dimensions": { width: 52, height: 20 },
+				"link": { url: '/', name: 'Logo 06' }
+			},
+		],
+		'more': {
+			url: '/',
+			text: 'Meet all customers',
+		}
+	}
+}
+
+const communityUpdatesData = {
+	"success": "true",
+	"data": {
+		'title': 'Caring is the new marketing',
+		'shortdescription': `The Nextcent blog is the best place to read about the latest membership insights, trends and more. See who's joining the community, read about how our community are increasing their membership income and lot's more.`,
+		'carddata': [
+			{
+				"image": "working_women.png",
+				"title": "Creating Streamlined Safeguarding Processes with OneRen",
+				"link": { url: '/', name: 'Readmore' },
+			},
+			{
+				"image": "laptop_side.png",
+				"title": "What are your safeguarding responsibilities and how can you manage them?",
+				"link": { url: '/', name: 'Readmore' },
+			},
+			{
+				"image": "laptop_top.png",
+				"title": "Revamping the Membership Model with Triathlon Australia",
+				"link": { url: '/', name: 'Readmore' },
+			},
+		]
+	}
+};
+
 
 export default function Home() {
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24">
-      <div className="z-10 max-w-5xl w-full items-center justify-between font-mono text-sm lg:flex">
-        <p className="fixed left-0 top-0 flex w-full justify-center border-b border-gray-300 bg-gradient-to-b from-zinc-200 pb-6 pt-8 backdrop-blur-2xl dark:border-neutral-800 dark:bg-zinc-800/30 dark:from-inherit lg:static lg:w-auto  lg:rounded-xl lg:border lg:bg-gray-200 lg:p-4 lg:dark:bg-zinc-800/30">
-          Get started by editing&nbsp;
-          <code className="font-mono font-bold">src/app/page.js</code>
-        </p>
-        <div className="fixed bottom-0 left-0 flex h-48 w-full items-end justify-center bg-gradient-to-t from-white via-white dark:from-black dark:via-black lg:static lg:h-auto lg:w-auto lg:bg-none">
-          <a
-            className="pointer-events-none flex place-items-center gap-2 p-8 lg:pointer-events-auto lg:p-0"
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            By{" "}
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className="dark:invert"
-              width={100}
-              height={24}
-              priority
-            />
-          </a>
-        </div>
-      </div>
+    <main className="w-full dark:bg-slate-950">
+        <SwiperHero data={heroData.data}/>
+        <Client data={clientsData.data}/>
+        <Community data={communityData.data} count={3}/>
+        <Content data={contentBlockData1.data}/>
+        <Achievement data={achievemenetData.data}/>
+        <Content data={contentBlockData2.data}/>
+        <Customers data={customersData.data}/>
+        <CommunityUpdates data={communityUpdatesData.data}/>
+        <Content data={contentBlockData3.data}/>
 
-      <div className="relative flex place-items-center before:absolute before:h-[300px] before:w-full sm:before:w-[480px] before:-translate-x-1/2 before:rounded-full before:bg-gradient-radial before:from-white before:to-transparent before:blur-2xl before:content-[''] after:absolute after:-z-20 after:h-[180px] after:w-full sm:after:w-[240px] after:translate-x-1/3 after:bg-gradient-conic after:from-sky-200 after:via-blue-200 after:blur-2xl after:content-[''] before:dark:bg-gradient-to-br before:dark:from-transparent before:dark:to-blue-700 before:dark:opacity-10 after:dark:from-sky-900 after:dark:via-[#0141ff] after:dark:opacity-40 before:lg:h-[360px] z-[-1]">
-        <Image
-          className="relative dark:drop-shadow-[0_0_0.3rem_#ffffff70] dark:invert"
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
-        />
-      </div>
-
-      <div className="mb-32 grid text-center lg:max-w-5xl lg:w-full lg:mb-0 lg:grid-cols-4 lg:text-left">
-        <a
-          href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Docs{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Find in-depth information about Next.js features and API.
-          </p>
-        </a>
-
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800 hover:dark:bg-opacity-30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Learn{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Learn about Next.js in an interactive course with&nbsp;quizzes!
-          </p>
-        </a>
-
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Templates{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Explore starter templates for Next.js.
-          </p>
-        </a>
-
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Deploy{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50 text-balance`}>
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
-      </div>
     </main>
   );
 }
