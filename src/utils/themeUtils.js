@@ -1,4 +1,4 @@
-import { THEME_TYPES } from "@/constants";
+import { THEME_TYPES } from "@/constants/theme";
 
 
 export const applyThemePreference = (theme) => {
