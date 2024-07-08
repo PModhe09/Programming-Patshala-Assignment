@@ -45,7 +45,7 @@ export const SwiperHero = ({ data }) => {
                                         }
                                         <div className="content flex flex-col justify-center items-center md:order-0">
                                             <div className="max-w-[670px]">
-                                                <div className='h1 max-sm:text-3xl ' dangerouslySetInnerHTML={{ __html: herodata.title }}>
+                                                <div className='h1 max-sm:text-3xl dark:text-white' dangerouslySetInnerHTML={{ __html: herodata.title }}>
                                                 </div>
                                                 <div className="text-base leading-[1.5] text-dark-g dark:text-snow" dangerouslySetInnerHTML={{ __html: herodata.description }}></div>
                                                 {
