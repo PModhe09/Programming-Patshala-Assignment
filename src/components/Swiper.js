@@ -45,9 +45,9 @@ export const SwiperHero = ({ data }) => {
                                         }
                                         <div className="content flex flex-col justify-center items-center md:order-0">
                                             <div className="max-w-[670px]">
-                                                <div className='h1 max-sm:text-3xl dark:text-snow' dangerouslySetInnerHTML={{ __html: herodata.title }}>
+                                                <div className='h1 max-sm:text-3xl ' dangerouslySetInnerHTML={{ __html: herodata.title }}>
                                                 </div>
-                                                <div className="text-base leading-[1.5] text-snow" dangerouslySetInnerHTML={{ __html: herodata.description }}></div>
+                                                <div className="text-base leading-[1.5] text-dark-g dark:text-snow" dangerouslySetInnerHTML={{ __html: herodata.description }}></div>
                                                 {
                                                     herodata.link?.url &&
                                                     <Button variant="default" className='mt-9 text-snow' href={herodata.link.url}>{herodata.link.name}</Button>
